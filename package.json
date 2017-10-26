@@ -1,0 +1,25 @@
+{
+  "name": "libreta-de-contactos-angularjs",
+  "version": "1.0.0",
+  "description": "Libreta de contactos con angularJs, Firebase y Gulp",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://mareteo@bitbucket.org/mareteo/libreta-de-contactos-angularjs.git"
+  },
+  "keywords": [
+    "Angularjs"
+  ],
+  "author": "Mateo Angulo",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/mareteo/libreta-de-contactos-angularjs#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

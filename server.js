@@ -1,14 +1,15 @@
-const http = require('http');
+// importar
+var express = require('express');
 
-const hostname = '127.0.0.1';
-const port = 3500;
+// instanciar
+var app = express();
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n');
+// ruteo
+app.get('/', function(req, res){
+  res.sendFile(__dirname + '/index.html');
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+// escuchar
+app.listen(9000);
+
+console.log("Servidor Express escuchando en modo %s", app.settings.env);

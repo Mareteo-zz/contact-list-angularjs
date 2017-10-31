@@ -1,4 +1,8 @@
-var app = angular.module("libretaApp", ['ngRoute']);
-app.controller("mainCtrl", ['$scope', function ($scope) {
-  $scope.message = "Libreta de contactos"
-}]);
+angular.module('myApp', ['ngRoute', 'myApp.page1', 'myApp.page2'])
+  .config(['$routeProvider', function($routeProvider){    
+    $routeProvider
+    .when('/', {
+      redirectTo: 'Page1'
+    })
+    .otherwise({ redirectTo: 'page1' });
+  }]);

@@ -1,20 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
   <head>
     <meta charset="utf-8">
-    <title>Libreta de Contactos</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Libre de COntactos</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
   </head>
-  <body ng-app="libretaApp" ng-controller="mainCtrl">
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#!/page1">Page1</a></li>
+            <li><a href="#!/page2">page2</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
     <div class="container">
-      <h1 class="text-center">{{ message }}</h1>
+      <h1>Libreta de contactos</h1>
+
+      <ng-view></ng-view>
     </div>
 
-
-
-    <!-- Include files -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js" charset="utf-8"></script>
     <script src="https://code.angularjs.org/1.6.6/angular-route.min.js" charset="utf-8"></script>
     <script src="app.js" charset="utf-8"></script>
+    <script src="page1/page1.js" charset="utf-8"></script>
+    <script src="page2/page2.js" charset="utf-8"></script>
+
   </body>
 </html>

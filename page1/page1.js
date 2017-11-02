@@ -16,6 +16,6 @@ angular.module('myApp.page1', ['ngRoute', 'firebase'])
         console.log(info);
       }, function(error){
         console.log(error);
-      })      
+      })
     }
   });

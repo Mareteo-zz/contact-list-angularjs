@@ -7,8 +7,10 @@ angular.module('myApp.page2', ['ngRoute', 'firebase'])
     });
   }])
   .controller('page2Ctrl', function($scope, $firebaseArray) {
+    $scope.updatedOk = false;
     $scope.addContact = function (){
       var ref = firebase.database().ref("contacts");
+      $scope.updatedOk = true;
       $firebaseArray(ref).$add($scope.contact)
       .then(function (ref) {
         $scope.contact.name = "";

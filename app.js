@@ -1,4 +1,4 @@
-angular.module('myApp', ['ngRoute', 'myApp.page1', 'myApp.page2', 'myApp.page3'])
+angular.module('myApp', ['ngRoute', 'myApp.page1', 'myApp.page2', 'myApp.page3', 'myApp.page4'])
   .config(['$routeProvider', function($routeProvider){
     $routeProvider
     .when('/', {

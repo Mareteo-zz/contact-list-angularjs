@@ -7,12 +7,14 @@ angular.module('myApp.page3', ['ngRoute', 'firebase'])
     });
   }])
   .controller('page3Ctrl', function($scope, $firebaseArray, $firebaseObject, $routeParams) {
+    $scope.updatedOk = false;
     var id = $routeParams.id;
     var ref = firebase.database().ref("contacts/" + id);
     $scope.contact = $firebaseObject(ref);
 
     $scope.editContact = function (id) {
       var ref = firebase.database().ref("contacts/"+id);
+      $scope.updatedOk = true;
       ref.update({
         name: $scope.contact.name,
         email: $scope.contact.email,

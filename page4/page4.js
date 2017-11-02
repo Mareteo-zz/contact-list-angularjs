@@ -1,12 +1,12 @@
-angular.module('myApp.page3', ['ngRoute', 'firebase'])
+angular.module('myApp.page4', ['ngRoute', 'firebase'])
   .config(['$routeProvider', function($routeProvider){
     $routeProvider
-    .when('/page3/:id', {
-      templateUrl: 'page3/page3.html',
-      controller: 'page3Ctrl'
+    .when('/page4/:id', {
+      templateUrl: 'page4/page4.html',
+      controller: 'page4Ctrl'
     });
   }])
-  .controller('page3Ctrl', function($scope, $firebaseArray, $firebaseObject, $routeParams) {
+  .controller('page4Ctrl', function($scope, $firebaseArray, $firebaseObject, $routeParams) {
     var id = $routeParams.id;
     var ref = firebase.database().ref("contacts/" + id);
     $scope.contact = $firebaseObject(ref);
